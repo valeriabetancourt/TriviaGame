@@ -1,9 +1,8 @@
 var card = $("#quiz-area");
 
-// Question set
 var questions = [
   {
-    question: "Which of these couples was famous for their artwork",
+    question: "Which of these couples was famous for their artwork?",
     answers: [
       "Sanson & Dalia",
       "Diego & Frida",
@@ -14,8 +13,8 @@ var questions = [
   },
   {
     question: "Which of the following is the coldest place on Earth?",
-    answers: ["Africa", "Europe", "Antartida", "Argentina"],
-    correctAnswer: "Antartida"
+    answers: ["Africa", "Europe", "Antartica", "Argentina"],
+    correctAnswer: "Antartica"
   },
   {
     question: "In which country is the leaning tower of pisa?",
@@ -44,13 +43,12 @@ var questions = [
   },
   {
     question:
-      "What was the name of the principal at Bayside High in Saved By The Bell?",
-    answers: ["Mr.Zhou", "Mr.Driggers", "Mr.Belding", "Mr.Page"],
-    correctAnswer: "Mr.Belding"
+      "Which of the following elements is the most common in the atomsphere?",
+    answers: ["Helium", "Nitrogen", "Oxigen", "Hydrogen"],
+    correctAnswer: "Nitrogen"
   }
 ];
 
-// Variable that will hold the setInterval
 var timer;
 
 var game = {
@@ -115,8 +113,6 @@ var game = {
     card.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
   }
 };
-
-// CLICK EVENTS
 
 $(document).on("click", "#start", function() {
   game.start();
